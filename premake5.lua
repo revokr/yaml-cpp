@@ -10,15 +10,15 @@ project "YAML"
 
 	files
 	{
-		"src/**.h",
-    "src/**.cpp",
+	    "src/**.h",
+            "src/**.cpp",
 
-    "include/**.h"
-	}
+   	    "include/**.h"
+	 }
 
-  includedirs {
-    "include"
-  }
+	includedirs {
+	    "include"
+        }
 
 	filter "system:windows"
 		systemversion "latest"
