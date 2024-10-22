@@ -2,7 +2,6 @@ project "YAML"
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "on"
 	warnings "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -11,7 +10,7 @@ project "YAML"
 	files
 	{
 	    "src/**.h",
-            "src/**.cpp",
+        "src/**.cpp",
 
    	    "include/**.h"
 	 }
@@ -22,6 +21,10 @@ project "YAML"
 
 	filter "system:windows"
 		systemversion "latest"
+
+	defines {
+		"YAML_CPP_STATIC_DEFINE"
+	}
 
 	filter "configurations:Debug"
 		runtime "Debug"
